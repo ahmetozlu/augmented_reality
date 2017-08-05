@@ -1,11 +1,19 @@
+/*
+---------------------------------------------------------------------
+--- Author         : Ahmet Özlü
+--- Mail           : ahmetozlu93@gmail.com
+--- Date           : 1st August 2017
+--- Version        : 1.0
+--- OpenCV Version : 2.4.10
+--- Demo Video     : https://www.youtube.com/watch?v=nPfR5ACrqu0
+---------------------------------------------------------------------
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include <GL/glew.h>
-
 #include <glfw3.h>
-
 
 GLuint loadBMP_custom(const char * imagepath){
 
@@ -24,7 +32,6 @@ GLuint loadBMP_custom(const char * imagepath){
 	if (!file)							    {printf("%s could not be opened. Are you in the right directory ? Don't forget to read the FAQ !\n", imagepath); getchar(); return 0;}
 
 	// Read the header, i.e. the 54 first bytes
-
 	// If less than 54 bytes are read, problem
 	if ( fread(header, 1, 54, file)!=54 ){ 
 		printf("Not a correct BMP file\n");
@@ -111,8 +118,6 @@ GLuint loadBMP_custom(const char * imagepath){
 //	return textureID;
 //}
 
-
-
 #define FOURCC_DXT1 0x31545844 // Equivalent to "DXT1" in ASCII
 #define FOURCC_DXT3 0x33545844 // Equivalent to "DXT3" in ASCII
 #define FOURCC_DXT5 0x35545844 // Equivalent to "DXT5" in ASCII
@@ -120,7 +125,6 @@ GLuint loadBMP_custom(const char * imagepath){
 GLuint loadDDS(const char * imagepath){
 
 	unsigned char header[124];
-
 	FILE *fp; 
  
 	/* try to open the file */ 
@@ -147,7 +151,6 @@ GLuint loadDDS(const char * imagepath){
 	unsigned int mipMapCount = *(unsigned int*)&(header[24]);
 	unsigned int fourCC      = *(unsigned int*)&(header[80]);
 
- 
 	unsigned char * buffer;
 	unsigned int bufsize;
 	/* how big is it going to be including all mipmaps? */ 
@@ -202,10 +205,6 @@ GLuint loadDDS(const char * imagepath){
 		if(height < 1) height = 1;
 
 	} 
-
 	free(buffer); 
-
 	return textureID;
-
-
 }

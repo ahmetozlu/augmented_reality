@@ -1,21 +1,20 @@
-/*****************************************************************************
-*   Markerless AR desktop application.
-******************************************************************************
-*   by Khvedchenia Ievgen, 5th Dec 2012
-*   http://computer-vision-talks.com
-******************************************************************************
-*   Ch3 of the book "Mastering OpenCV with Practical Computer Vision Projects"
-*   Copyright Packt Publishing 2012.
-*   http://www.packtpub.com/cool-projects-with-opencv/book
-*****************************************************************************/
+/*
+---------------------------------------------------------------------
+--- Author         : Ahmet Özlü
+--- Mail           : ahmetozlu93@gmail.com
+--- Date           : 1st August 2017
+--- Version        : 1.0
+--- OpenCV Version : 2.4.10
+--- Demo Video     : https://www.youtube.com/watch?v=nPfR5ACrqu0
+---------------------------------------------------------------------
+*/
 
-////////////////////////////////////////////////////////////////////
 // File includes:
 #include <windows.h>
 #include "ARDrawingContext.hpp"
 #include "ARPipeline.hpp"
 #include "DebugHelpers.hpp"
-////////////////////////////////////////////////////////////////////
+
 // Standard includes:
 #include <opencv2/opencv.hpp>
 #include <windows.h>
@@ -24,6 +23,7 @@
 #define NOMINMAX
 #define min(a,b)            (((a) < (b)) ? (a) : (b))
 #define max(a,b)            (((a) > (b)) ? (a) : (b))
+
 /**
  * Processes a recorded video or live view from web-camera and allows you to adjust homography refinement and 
  * reprojection threshold in runtime.
@@ -48,9 +48,7 @@ int main(int argc, const char * argv[])
 {
     // Change this calibration to yours:
     CameraCalibration calibration(526.58037684199849f, 524.65577209994706f, 318.41744018680112f, 202.96659047014398f);
-	//CameraCalibration calibration(3695.6015857915449f, 3851.6878710503788f, 287.86928965741646f, 235.70133231411310f);
-	//CameraCalibration calibration(2407.1362123367062f, 2429.1422203445895f, 87.312424325572309f, 1.7375273575541268f);
-
+	
     if (argc < 2)
     {
         std::cout << "Input image not specified" << std::endl;
@@ -69,8 +67,7 @@ int main(int argc, const char * argv[])
     if (argc == 2)
     {
 		cv::VideoCapture cap = cv::VideoCapture(0);
-		processVideo(patternImage, calibration, cap);
-        //processVideo(patternImage, calibration, cv::VideoCapture(0));
+		processVideo(patternImage, calibration, cap);        
     }
     else if (argc == 3)
     {
@@ -193,5 +190,3 @@ bool processFrame(const cv::Mat& cameraFrame, ARPipeline& pipeline, ARDrawingCon
 
     return shouldQuit;
 }
-
-

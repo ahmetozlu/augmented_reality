@@ -1,20 +1,18 @@
-/*****************************************************************************
-*   Markerless AR desktop application.
-******************************************************************************
-*   by Khvedchenia Ievgen, 5th Dec 2012
-*   http://computer-vision-talks.com
-******************************************************************************
-*   Ch3 of the book "Mastering OpenCV with Practical Computer Vision Projects"
-*   Copyright Packt Publishing 2012.
-*   http://www.packtpub.com/cool-projects-with-opencv/book
-*****************************************************************************/
+/*
+---------------------------------------------------------------------
+--- Author         : Ahmet Özlü
+--- Mail           : ahmetozlu93@gmail.com
+--- Date           : 1st August 2017
+--- Version        : 1.0
+--- OpenCV Version : 2.4.10
+--- Demo Video     : https://www.youtube.com/watch?v=nPfR5ACrqu0
+---------------------------------------------------------------------
+*/
 
-////////////////////////////////////////////////////////////////////
 // File includes:
 #include <windows.h>
 #include "ARDrawingContext.hpp"
 
-////////////////////////////////////////////////////////////////////
 // Include standard headers
 #include <stdio.h>
 #include <stdlib.h>
@@ -90,15 +88,19 @@ ARDrawingContext::ARDrawingContext(std::string windowName, cv::Size frameSize, c
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_FRONT);
 
-	//Texture = loadDDS("roofDiffuseMap.DDS");//
+	// Load .bmp file as texture
 	Texture=loadBMP_custom("C:/Users/ErArGe-5/Documents/Visual Studio 2013/Projects/ARProject/Debug/preview.bmp");
-	//Texture=loadDDS("C:/Users/ErArGe-5/Documents/Visual Studio 2013/Projects/ARProject/Debug/uvmap.dds");
+	
+    // Load .dds file as texture (uvmap)
+    //Texture=loadDDS("C:/Users/ErArGe-5/Documents/Visual Studio 2013/Projects/ARProject/Debug/uvmap.dds");
 
+    // load(parse) .obj file
 	res = loadOBJ("C:/Users/ErArGe-5/Documents/Visual Studio 2013/Projects/ARProject/Debug/untitled.obj", vertices, uvs, normals);
 
-	scale3DModel(0.1f);
+	// Scale 3D Model
+    scale3DModel(0.1f);
 
-	//Analyze size of the vertices and uvs
+	// Analyze size of the vertices and uvs
 	/*std::cout << vertices.size();
 	std::cout <<uvs.size();*/
 }
@@ -126,7 +128,6 @@ void ARDrawingContext::draw()
 	glFlush();
 }
 
-
 void ARDrawingContext::drawCameraFrame()
 {
 	// Initialize texture for background image
@@ -141,11 +142,9 @@ void ARDrawingContext::drawCameraFrame()
 		m_isTextureInitialized = true;
 	}
 
-
 	int w = m_backgroundImage.cols;
 	int h = m_backgroundImage.rows;
 	
-
 	glPixelStorei(GL_PACK_ALIGNMENT, 1);
 	glBindTexture(GL_TEXTURE_2D, m_backgroundTextureId);
 
@@ -244,7 +243,6 @@ void ARDrawingContext::buildProjectionMatrix(const CameraCalibration& calibratio
 	projectionMatrix.data[14] = -2.0f * farPlane * nearPlane / (farPlane - nearPlane);
 	projectionMatrix.data[15] = 0.0f;
 }
-
 
 void ARDrawingContext::drawCoordinateAxis()
 {

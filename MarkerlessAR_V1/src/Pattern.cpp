@@ -1,15 +1,14 @@
-/*****************************************************************************
-*   Markerless AR desktop application.
-******************************************************************************
-*   by Khvedchenia Ievgen, 5th Dec 2012
-*   http://computer-vision-talks.com
-******************************************************************************
-*   Ch3 of the book "Mastering OpenCV with Practical Computer Vision Projects"
-*   Copyright Packt Publishing 2012.
-*   http://www.packtpub.com/cool-projects-with-opencv/book
-*****************************************************************************/
+/*
+---------------------------------------------------------------------
+--- Author         : Ahmet Özlü
+--- Mail           : ahmetozlu93@gmail.com
+--- Date           : 1st August 2017
+--- Version        : 1.0
+--- OpenCV Version : 2.4.10
+--- Demo Video     : https://www.youtube.com/watch?v=caWl8nG6mLk
+---------------------------------------------------------------------
+*/
 
-////////////////////////////////////////////////////////////////////
 // File includes:
 #include "Pattern.hpp"
 
@@ -47,4 +46,3 @@ void PatternTrackingInfo::draw2dContour(cv::Mat& image, cv::Scalar color) const
     cv::line(image, points2d[i], points2d[ (i+1) % points2d.size() ], color, 2, CV_AA);
   }
 }
-
