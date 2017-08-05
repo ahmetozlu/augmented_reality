@@ -28,7 +28,42 @@ extremums of the first derivative of the image gradients in the X and Y directio
 - The screenshot:
 ![screenshot_2](https://user-images.githubusercontent.com/22610163/28994049-6ea49036-79cd-11e7-88bf-696f046c67f3.png)
 
-## 3. STUDYINGS WHICH ARE IN PROGRESS
+## 3. USAGE
+To build this app use the CMake to generate project files for your IDE, then build the project in your IDE.
+
+***NOTE***: You will need to have OpenCV built with OpenGL support in order to run the demo (prebuilt versions of OpenCV don't support OpenGL).
+
+### How to enable OpenGL Support in OpenCV:
+* Linux:   Execute "sudo apt-get install libgtkglext1 libgtkglext1-dev" first.
+* MacOSX:  Install QT4 and then configure OpenCV with QT and OpenGL.
+* Windows: Enable WITH_OPENGL=YES flag when building OpenCV to enable OpenGL support.
+
+### Building the project using CMake from the command-line:
+* Linux:
+      export OpenCV_DIR="~/OpenCV/build"
+      mkdir build
+      cd build
+      cmake -D OpenCV_DIR=$OpenCV_DIR ..
+      make 
+
+* MacOSX (Xcode):
+      export OpenCV_DIR="~/OpenCV/build"
+      mkdir build
+      cd build
+      cmake -G Xcode -D OpenCV_DIR=$OpenCV_DIR ..
+      open ARProject.xcodeproj
+
+* Windows (MS Visual Studio):
+      set OpenCV_DIR="C:\OpenCV\build"
+      mkdir build
+      cd build
+      cmake -G "Visual Studio 9 2008" -D OpenCV_DIR=%OpenCV_DIR% ..
+      start ARProject.sln
+
+### Running the project:
+Just execute "ARProject".
+
+## 4. STUDYINGS WHICH ARE IN PROGRESS
 
 These 2 important tasks are in progress and they will be submitted with MarkerlessAR_V3 soon:
 - Working on Performance Issues to Get Realtime Tracking
