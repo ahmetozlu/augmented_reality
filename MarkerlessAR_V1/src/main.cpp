@@ -186,5 +186,3 @@ bool processFrame(const cv::Mat& cameraFrame, ARPipeline& pipeline, ARDrawingCon
 
     return shouldQuit;
 }
-
-
