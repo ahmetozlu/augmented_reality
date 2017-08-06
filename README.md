@@ -34,12 +34,17 @@ To build this app use the CMake to generate project files for your IDE, then bui
 ***NOTE***: You will need to have OpenCV built with OpenGL support in order to run the demo (prebuilt versions of OpenCV don't support OpenGL).
 
 ### How to enable OpenGL Support in OpenCV:
-* Linux:   Execute "sudo apt-get install libgtkglext1 libgtkglext1-dev" first.
+* Linux:   Execute; 
+
+      sudo apt-get install libgtkglext1 libgtkglext1-dev
+      
 * MacOSX:  Install QT4 and then configure OpenCV with QT and OpenGL.
+
 * Windows: Enable WITH_OPENGL=YES flag when building OpenCV to enable OpenGL support.
 
 ### Building the project using CMake from the command-line:
 * Linux:
+
       export OpenCV_DIR="~/OpenCV/build"
       mkdir build
       cd build
@@ -47,6 +52,7 @@ To build this app use the CMake to generate project files for your IDE, then bui
       make 
 
 * MacOSX (Xcode):
+
       export OpenCV_DIR="~/OpenCV/build"
       mkdir build
       cd build
@@ -54,6 +60,7 @@ To build this app use the CMake to generate project files for your IDE, then bui
       open ARProject.xcodeproj
 
 * Windows (MS Visual Studio):
+
       set OpenCV_DIR="C:\OpenCV\build"
       mkdir build
       cd build
@@ -70,6 +77,15 @@ These 2 important tasks are in progress and they will be submitted with Markerle
 - Multiple Object Detection And Tracking
 
 ***!!! Important Note:*** The applications in this tutorial work stable with OpenCV 2.4.10 (You should build OpenCV with OpenGL support for executing this project!)
+
+## Citation
+
+      @ONLINE{vdtc,
+          author = "Ahmet Özlü",
+          title  = "Open Source Markerless Augmented Reality",
+          year   = "2017",
+          url    = "https://github.com/ahmetozlu/Open-Source-Markerless-Augmented-Reality"
+      }
 
 ## Author
 Ahmet Özlü
