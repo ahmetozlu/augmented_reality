@@ -4,7 +4,7 @@ This repository includes an "Open Source Markerless Augmented Reality" tutorial 
 
 ## 2. FOLDERS AND THEIR EXPLANATIONS
 
-**MarkerlessAR_V1:** It is the first step of "Open Source Markerless Augmented Reality" and it has these capabilities:
+**1.) MarkerlessAR_V1:** It is the first step of "Open Source Markerless Augmented Reality" and it has these capabilities:
 - Using feature descriptors to find an arbitrary image on video
 - Feature extraction: In this project, I am interested in corner detection. The [corner detection](http://docs.opencv.org/2.4/doc/tutorials/features2d/trackingmotion/harris_detector/harris_detector.html) is based
 on an analysis of the edges in the image. A corner-based edge detection algorithm
@@ -18,7 +18,7 @@ extremums of the first derivative of the image gradients in the X and Y directio
 - The screenshot:
 ![screenshot_1](https://user-images.githubusercontent.com/22610163/28993909-d6e0be12-79c9-11e7-9548-77ce73071e12.png)
 
-**MarkerlessAR_V2:** It is the second step of "Open Source Markerless Augmented Reality" and it has these capabilities:
+**2.) MarkerlessAR_V2:** It is the second step of "Open Source Markerless Augmented Reality" and it has these capabilities:
 - Parsing the 3D (.OBJ) model
 - Loading / Rendering the 3D model
 - Scaling the 3D model
@@ -84,7 +84,7 @@ These 2 important tasks are in progress and they will be submitted with Markerle
           author = "Ahmet Özlü",
           title  = "Open Source Markerless Augmented Reality",
           year   = "2017",
-          url    = "https://github.com/ahmetozlu/Open-Source-Markerless-Augmented-Reality"
+          url    = "https://github.com/ahmetozlu/open_source_markerless_augmented_reality"
       }
 
 ## Author
