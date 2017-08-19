@@ -12,6 +12,10 @@ Pattern.hpp
 PatternDetector.cpp
 PatternDetector.hpp
 DebugHelpers.hpp
+objloader.cpp
+objloader.hpp
+texture.cpp
+texture.hpp
 )
 
 target_link_libraries( ARProject ${OpenCV_LIBRARIES} )
