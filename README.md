@@ -6,17 +6,13 @@ See wiki for more information: https://github.com/ahmetozlu/open_source_markerle
 
 ## Quick Demo
 
-<details>
-           <summary>MarkerlessAR_V1</summary>         
-</details>
+- MarkerlessAR_V1
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22610163/30681274-685c38c8-9ead-11e7-85c1-d186fa3d8af8.gif">
 </p>
 
-<details>
-           <summary>MarkerlessAR_V2</summary>         
-</details>
+- MarkerlessAR_V2
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22610163/30681326-a2b8fdda-9ead-11e7-8db0-319397c5e6c8.gif">
