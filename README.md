@@ -18,7 +18,7 @@ See [wiki](https://github.com/ahmetozlu/open_source_markerless_augmented_reality
   <img src="https://user-images.githubusercontent.com/22610163/30681326-a2b8fdda-9ead-11e7-8db0-319397c5e6c8.gif">
 </p>
 
-- When my OpenGL Code Works :D
+- When my OpenGL code works :D
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22610163/38023882-0a488c78-328c-11e8-8be0-58df223ca761.gif">
