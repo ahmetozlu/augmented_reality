@@ -24,6 +24,13 @@ See the related **[Medium post](https://medium.com/@ahmetozlu93/marker-less-augm
   <img src="https://user-images.githubusercontent.com/22610163/38023882-0a488c78-328c-11e8-8be0-58df223ca761.gif">
 </p>
 
+**TODOs:**
+
+- Fixing the performance issues:
+  - Separate "detection" and "tracking" in 2 threads.
+  - Once the target image is detected just track the keypoints using sparse optical flow (calcOpticalFlowPyrLK) and compute camera pose (solvePnp) instead of performing feature detection and matching on every frame. The feature detection will be performed again when tracking is lost on most of the keypoints.
+- Dimensionality reduction will be performed on key points to make pattern detector more robust.
+
 ## Citation
 If you use this code for your publications, please cite it as:
 
