@@ -1,6 +1,6 @@
 # Marker-less Augmented Reality
 
-In this project readers will learn how to create a standard real-time project using OpenCV (for desktop), and how to perform a new method of marker-less augmented reality, using the actual environment as the input instead of printed square markers. It covers some of the theory of marker-less AR and show how to apply it in useful projects.
+In this project readers will learn how to create a standard real-time project using OpenCV (for desktop), and how to perform a new method of marker-less augmented reality, using the actual environment as the input instead of printed square markers. It covers some of the theory of marker-less AR and show how to apply it in useful projects. ***Please contact if you need professional marker-less AR project with the super high accuracy.***
 
 See the related **[Medium post](https://medium.com/@ahmetozlu93/marker-less-augmented-reality-by-opencv-and-opengl-531b2af0a130)** for more information!
 
